@@ -16,9 +16,18 @@ age_max <- function(you){
   return(age)
 }
 
+# function to check if this is the roy moore scandal
+roy_moore <- function(you, partner){
+  if(you == 32 && partner == 14) return(TRUE)
+  return(FALSE)
+}
+
 # function to check if you-partner ages are permissible
 age_check <- function(you, partner){
-  if(age_min(you) <= partner && age_max(you) >= partner){
+  # roy moore check
+  if(roy_moore(you, partner)) {
+    "This is not appropriate, unless you are Roy Moore"
+  } else if(age_min(you) <= partner && age_max(you) >= partner){
     "Yes, this is permissible"
   } else if(age_min(you) > partner){
     "No, you are too old to date this person"

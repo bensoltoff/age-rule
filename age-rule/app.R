@@ -58,7 +58,7 @@ age_plot <- ggplot(ages) +
   theme_bw(base_size = 18) +
   theme(legend.position = "none")
 
-# Define UI for application that draws a histogram
+# Define UI
 ui <- fluidPage(
   
   # Application title
@@ -88,7 +88,7 @@ ui <- fluidPage(
   )
 )
 
-# Define server logic required to draw a histogram
+# Define server logic
 server <- function(input, output) {
   
   output$age_plot <- renderPlot({

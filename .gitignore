@@ -35,3 +35,6 @@ vignettes/*.pdf
 
 # rsconnnect info
 rsconnect/
+
+.DS_Store
+
